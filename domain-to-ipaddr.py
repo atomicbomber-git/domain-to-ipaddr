@@ -6,6 +6,8 @@ domain_info = socket.getaddrinfo(domain_name, 80)
 
 ipv4_addresses = []
 for item in domain_info:
-    ipv4_addresses.append(item[4][0])
+    address = item[4][0]
+    if address not in ipv4_addresses:
+        ipv4_addresses.append(address)
 
 print(domain_name + " " + " ".join(ipv4_addresses))
