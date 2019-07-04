@@ -10,4 +10,4 @@ for item in domain_info:
     if address not in ipv4_addresses:
         ipv4_addresses.append(address)
 
-print(domain_name + " " + " ".join(ipv4_addresses))
+print(" ".join(ipv4_addresses) + " " + domain_name)
